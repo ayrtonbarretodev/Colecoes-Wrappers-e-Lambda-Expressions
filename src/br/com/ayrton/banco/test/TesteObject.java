@@ -4,7 +4,7 @@ import br.com.ayrton.banco.modelo.Cliente;
 import br.com.ayrton.banco.modelo.ContaCorrente;
 import br.com.ayrton.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteObject {
 
 	public static void main(String[] args) {
 
