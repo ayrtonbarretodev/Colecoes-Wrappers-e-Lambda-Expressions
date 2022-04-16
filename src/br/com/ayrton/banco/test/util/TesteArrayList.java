@@ -5,7 +5,6 @@ import br.com.ayrton.banco.modelo.ContaCorrente;
 import br.com.ayrton.banco.modelo.ContaPoupanca;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Teste {
     public static void main(String[] args) {
