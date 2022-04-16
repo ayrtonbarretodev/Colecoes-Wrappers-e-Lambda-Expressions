@@ -5,8 +5,9 @@ import br.com.ayrton.banco.modelo.ContaCorrente;
 import br.com.ayrton.banco.modelo.ContaPoupanca;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class TesteArrayList {
+public class TesteLinkedList {
     public static void main(String[] args) {
 
         ContaCorrente cc = new ContaCorrente(11,22);
@@ -14,7 +15,7 @@ public class TesteArrayList {
         ContaCorrente contaCorrente = new ContaCorrente(55,66);
         ContaPoupanca contaPoupanca = new ContaPoupanca(77,88);
 
-        ArrayList<Conta> contaList = new ArrayList<>();
+        LinkedList<Conta> contaList = new LinkedList<>();
         contaList.add(cc);
         contaList.add(cp);
         contaList.add(contaCorrente);
