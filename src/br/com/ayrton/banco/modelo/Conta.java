@@ -1,6 +1,8 @@
 package br.com.ayrton.banco.modelo;
 
 
+import java.util.Objects;
+
 /**
  * Classe representa a moldura de uma conta
  * 
@@ -97,4 +99,16 @@ public abstract class Conta extends Object {
 		return "Numero: " + this.numero + ", Agencia: " + this.agencia;
 	}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Conta conta = (Conta) o;
+        return Double.compare(conta.saldo, saldo) == 0 && agencia == conta.agencia && numero == conta.numero && Objects.equals(titular, conta.titular);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(saldo, agencia, numero, titular);
+    }
 }
