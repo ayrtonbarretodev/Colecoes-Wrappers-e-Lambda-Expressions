@@ -9,7 +9,7 @@ import java.util.Objects;
  * @author Nico Steppat
  *
  */
-public abstract class Conta extends Object {
+public abstract class Conta extends Object implements Comparable<Conta>{
 
     protected double saldo;
     private int agencia;
@@ -110,5 +110,10 @@ public abstract class Conta extends Object {
     @Override
     public int hashCode() {
         return Objects.hash(saldo, agencia, numero, titular);
+    }
+
+    @Override
+    public int compareTo(Conta outraConta) {
+        return Double.compare(this.saldo,outraConta.saldo);
     }
 }
