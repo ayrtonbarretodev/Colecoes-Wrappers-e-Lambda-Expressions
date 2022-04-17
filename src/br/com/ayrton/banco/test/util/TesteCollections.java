@@ -11,8 +11,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class TesteCollections {
-    private Integer num;
-    private int numero;
 
     public static void main(String[] args) {
         Conta cc1 = new ContaCorrente(22, 33);
@@ -57,7 +55,7 @@ public class TesteCollections {
 
         //lista.sort(new NumeroDaContaComparator(););
 
-        //forma 1
+        //forma 1 - utilizada no Java 8
         lista.sort(new TitularDaContaComparator());
 
         System.out.println("Comparando depois da ordenação - método sort - Comparando por nome");
@@ -80,7 +78,7 @@ public class TesteCollections {
 
         System.out.println();
 
-        //forma 2
+        //forma 2 - utilizada antes do java 8
         Collections.sort(lista, new NumeroDaContaComparator());
         System.out.println("Comparando depois da ordenação - método sort da classe Collections - sobrecarga 2 - - Comparando por número");
         for (Conta conta : lista) {
